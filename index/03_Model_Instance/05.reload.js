@@ -56,7 +56,7 @@ Customer.sync({ alter:true })
 
 }).then((data) => {
 
-    console.log("Customer destoryed")
+    console.log("Customer returned")
     console.log(data.toJSON())
 
 }).catch((err) => {
