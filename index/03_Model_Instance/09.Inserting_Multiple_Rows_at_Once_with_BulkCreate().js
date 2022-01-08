@@ -62,5 +62,5 @@ Customer.sync({ alter:true })
         console.log(element.toJSON())
     })
 }).catch((err) => {
-   console.log('wrong')
+   console.log(err)
 });
