@@ -48,5 +48,5 @@ Customer.sync({ alter:true })
 }).then((data) => {
     console.log(data.toJSON())
 }).catch((err) => {
-   console.log('wrong')
+   console.log(err)
 });
