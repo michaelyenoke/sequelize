@@ -24,7 +24,7 @@ const Customer = sequelize.define('customer', {
     user_id: {
         type:Sequelize.DataTypes.INTEGER,
         primaryKey:true,
-        autoincrement:true
+        autoIncrement:true
     },
     username:{
         type: Sequelize.DataTypes.STRING,
