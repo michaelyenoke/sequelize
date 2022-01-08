@@ -50,7 +50,7 @@ Customer.sync({ alter:true })
         //data.decrement({ age:2 })
      data.decrement({ age:2, height:3 })
 }).catch((err) => {
-   console.log('wrong')
+   console.log(err)
 });
 
 
