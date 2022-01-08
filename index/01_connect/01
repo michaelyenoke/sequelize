@@ -14,13 +14,4 @@ sequelize.authenticate().then(() => {
     console.log("Error connectiong to database")
 })
 
-/*
-async function myfunction() {
-    await sequelize.authenticate()
-    console.log("Connection successful!")
-}
-
-myfunction();
-*/
-
 console.log("check!")
