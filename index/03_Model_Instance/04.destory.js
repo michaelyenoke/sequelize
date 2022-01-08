@@ -49,7 +49,8 @@ Customer.sync({ alter:true })
     console.log("User added to database!");
 
     data.username = 'pizza'
-  
+    
+    // Updating Inserted Data with Save()
     //Executing (default): DELETE FROM `customer` WHERE `user_id` = 12
     return data.destroy()
 
