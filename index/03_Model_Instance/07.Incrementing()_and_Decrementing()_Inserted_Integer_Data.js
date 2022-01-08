@@ -47,7 +47,8 @@ Customer.sync({ alter:true })
     })
 }).then((data) => {
     // Executing (default): UPDATE `customer` SET `age`=`age`- 2 WHERE `user_id` = 16
-    data.decrement({ age:2 })
+        //data.decrement({ age:2 })
+     data.decrement({ age:2, height:3 })
 }).catch((err) => {
    console.log('wrong')
 });
