@@ -3,9 +3,10 @@ const Sequelize = require('sequelize')
 // Insert this line and replace the rest Sequelize typing
 const {DataType } = Sequelize;
 
-const sequelize = new Sequelize('sequelize_project',  'michaelyenoke', '1qaz2wsx3edc', {
+// connect to mySQL database created earler: 'sequelize_project'
+const sequelize = new Sequelize('your_database',  'your_username', 'your_password', {
     dialect:  'mysql',
-    host:'database-1.cqwpdgcki6p6.ap-southeast-1.rds.amazonaws.com',
+    host:'your_host',
     port:3306
 })
 
