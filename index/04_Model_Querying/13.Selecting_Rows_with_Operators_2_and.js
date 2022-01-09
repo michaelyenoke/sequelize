@@ -48,6 +48,8 @@ Customer.sync({ alter:true })
 .then(() => {
     // working with our update table.
     // Executing (default): SELECT `user_id`, `username`, `password`, `age`, `vegetarian` FROM `customer` AS `customer` WHERE (`customer`.`username` = 'Mickey' AND `customer`.`age` = 33);
+    // same as return Customer.findAll({ where:{username:'Mickey', age:33 }});
+    
     return Customer.findAll({ where:{
         [Op.and]: {username:'Mickey', age:33 }
         }
