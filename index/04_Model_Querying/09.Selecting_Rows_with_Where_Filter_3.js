@@ -47,6 +47,18 @@ Customer.sync({ alter:true })
     // Executing (default): SELECT `username` FROM `customer` AS `customer` WHERE `customer`.`age` = 25 AND `customer`.`username` = 'Nill';
     // { username: 'Nill' }
     return Customer.findAll({ attributes:['username'], where:{ age:25, username:'Nill' }});
+    
+    // Executing (default): SELECT `user_id`, `username`, `password`, `age`, `vegetarian` FROM `customer` AS `customer` WHERE `customer`.`age` = 25 AND `customer`.`username` = 'Nill';
+    // {
+    //    user_id: 23,
+    //    username: 'Nill',
+    //    password: '1234',
+    //    age: 25,
+    //    vegetarian: true
+    // }
+    return Customer.findAll({ where:{ age:25, username:'Nill' }});
+    
+    
 }).
 then((data) => { // data in this case (bulk) is an array
     data.forEach((element) => { // element is the object we want
