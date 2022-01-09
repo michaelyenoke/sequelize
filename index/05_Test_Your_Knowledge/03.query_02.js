@@ -47,7 +47,7 @@ const Student = sequelize.define('student', {
 Student.sync()
 .then(() => {
     return Student.findAll({
-        attribute:['name'],
+        attributes:['name'],
         where:{
         [Op.or]:{ favorite_class:'Law', vegetarian:true }
     }})
