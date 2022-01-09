@@ -47,7 +47,7 @@ const Customer = sequelize.define('customer', {
 Customer.sync({ alter:true })
 .then(() => {
     // working with our update table.
-    // gt : greater
+    // gt : greater than
     // Executing (default): SELECT `user_id`, `username`, `password`, `age`, `vegetarian` FROM `customer` AS `customer` WHERE `customer`.`age` > 25;
     return Customer.findAll({ where:{
             age:{
