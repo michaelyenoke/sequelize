@@ -3,9 +3,9 @@ const Sequelize = require('sequelize')
 // Selecting Rows with Operators
 const { DataTypes, Op } = Sequelize
 
-const sequelize = new Sequelize('sequelize_project',  'michaelyenoke', '1qaz2wsx3edc', {
+const sequelize = new Sequelize('your_database',  'your_username', 'your_password', {
     dialect:  'mysql',
-    host:'database-1.cqwpdgcki6p6.ap-southeast-1.rds.amazonaws.com',
+    host:'your_host',
     port:3306
 })
 
