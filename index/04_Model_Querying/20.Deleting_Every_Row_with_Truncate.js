@@ -47,7 +47,7 @@ Customer.sync({ alter:true })
     // 26
     return Customer.destroy({where:{ username:'hello!'}, truncate:true})
 
-    // delete every row
+    // delete every row but don't delete the table itself
     // return Customer.destroy({where:{ truncate:true })
 
 
