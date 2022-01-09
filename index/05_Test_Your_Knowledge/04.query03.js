@@ -49,6 +49,7 @@ Student.sync({ alter:true })
     // Executing (default): SELECT `student_id`, `name`, `favorite_class`, `school_year`, `vegetarian` FROM `student` AS `student` WHERE `student`.`favorite_class` = 'Law' AND `student`.`vegetarian` = true;
     return Student.findAll({
         attributes:[
+            'school_year',
             [sequelize.fn('COUNT', sequelize.col('school_year')), 'num_students']
         ],
         group:'school_year'
