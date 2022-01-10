@@ -96,15 +96,15 @@ const Customer = sequelize.define('customer', {
 
 Customer.sync({ alter:true })
 .then(() => {
-    sequelize.query('UPDATE customer SET age = 533 WHERE username = "Tom" ')
+    return sequelize.query('UPDATE customer SET age = 533 WHERE username = "Tom" ')
 }).then((data) => {
     // Dialect Affect on Results and Metadata
     // data type decided by dialect
     // console.log(data) -> undefined
     [result, metadata] = data
-    // console.log(result)
-    // console.log(metadata)
-    console.log(data)
+    console.log(result)
+    console.log(metadata)
+    //  console.log(data)
 }).catch((err) => {
    console.log(err)
 })
