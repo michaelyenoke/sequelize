@@ -31,9 +31,11 @@ const Capital = sequelize.define('capital',{
     timestamps: false
 })
 
+// source table: Country -> to have and to belong to 
 Country.hasOne(Capital); 
-
-
+// 因為：TypeError: capital.setCountry is not a function
+// 所以：
+Capital.belongsTo(Country);
 
 
 let country, capital;
@@ -50,8 +52,10 @@ sequelize.sync({alter:true}).then(()=> {
     capital = data
     return capital.setCountry(country)
 })
+.then((data) => {
+    console.log(data)
+})
 .catch((err) => {
     console.log(err)
 })
 
-// 失敗！
