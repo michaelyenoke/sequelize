@@ -32,6 +32,7 @@ const Capital = sequelize.define('capital',{
 })
 
 Country.hasOne(Capital); 
+// setCapital -> 失敗了
 
 
 
