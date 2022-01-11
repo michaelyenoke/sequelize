@@ -32,31 +32,22 @@ const Capital = sequelize.define('capital',{
 })
 
 Country.hasOne(Capital); 
-// setCapital -> 失敗了
-
-
-
-// Executing (default): SELECT `id`, `capitalName`, `countryId` FROM `capitals` AS `capital` WHERE `capital`.`capitalName` = 'Madird';
-// Executing (default): SELECT `id`, `countryName` FROM `countries` AS `country` WHERE `country`.`countryName` = 'Spain' LIMIT 1;
-// Executing (default): SELECT `id`, `capitalName`, `countryId` FROM `capitals` AS `capital` WHERE `capital`.`countryId` = 1 LIMIT 1;
-
 
 let country, capital;
 
 sequelize.sync({alter:true}).then(()=> {
     // working with our updated table.
-    return Capital.findOne({ where: { capitalName: 'Madird' }})
+    return Capital.findOne({ where: { capitalName: 'Berlin' }})
 })
 .then((data) => {
     capital = data
-    return Country.findOne({ where: { countryName: 'Spain'}} )
+    return Country.findOne({ where: { countryName: 'Germany'}} )
 })
 .then((data) => {
     country = data
-    country.setCapital(capital)
+    return country.setCapital(capital)
 })
 .catch((err) => {
     console.log(err)
 })
-
 
